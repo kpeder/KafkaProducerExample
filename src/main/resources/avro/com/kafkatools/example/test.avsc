@@ -1,0 +1,20 @@
+{
+    "type" : "record",
+    "name" : "example",
+    "namespace" : "com.kafkatools.example",
+    "doc" : "some payload",
+    "fields" : [ {
+      "name" : "id",
+      "type" : "string",
+      "doc" : "some identifier"
+    }, {
+      "name" : "message",
+      "type" : "string",
+      "doc" : "some message"
+    }, {
+      "name" : "notes",
+      "type" : [ "null", "string" ],
+      "doc" : "some optional notes"
+    } ]
+  }
+  

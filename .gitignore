@@ -4,6 +4,12 @@
 # Log file
 *.log
 
+# CRC files
+*.crc
+
+# Avro data files
+*.avro
+
 # BlueJ files
 *.ctxt
 
