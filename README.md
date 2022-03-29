@@ -1,6 +1,8 @@
 # KafkaProducerExample
 Simple KafkaProducer Example from the Confluent site
 
+(pending KafkaAvroProducer)
+
 ## Project
 This is a maven project
 
@@ -54,10 +56,10 @@ This is a maven project
     ```$ mvn clean dependency:copy-dependencies install```  
 3. configure the dependencies in ```conf/producer.properties``` (don't skip this  !)  
 4. add a topic we can produce to in our example (check conf/admin.properties for example connection properties)
-    ```cd /opt/kafka_2.13-2.8.1 && ./bin/kafka-topics.sh --create --command-config ./config/admin.properties --bootstrap-server b-2.testcluster.b.c5.kafka.us-east-1.amazonaws.com:9098 --partitions 3 --replication-factor 3 --topic TestTopic```  
+    ```cd /opt/kafka_2.13-2.8.1 && ./bin/kafka-topics.sh --create --command-config ./conf/admin.properties --bootstrap-server b-2.testcluster.b.c5.kafka.us-east-1.amazonaws.com:9098 --partitions 3 --replication-factor 3 --topic TestTopic```  
     ```cd -``` #get back to the previous dir  
 5. run the producer  
-    ```$ cd target && java -jar producer-0.1.0.jar ../config/producer.properties ../conf/input.txt```  
+    ```$ cd target && java -jar producer-0.1.0.jar ../conf/producer.properties ../src/main/resources/txt/com/kafkatools/example/input.txt```  
     ```cd -```  #get back to the previous dir  
 
 
